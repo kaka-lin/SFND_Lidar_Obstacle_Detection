@@ -23,6 +23,18 @@ The workspace provided in the SFND classroom comes preinstallated with everythin
 
 **Note** The [[CMakeLists.txt](https://github.com/udacity/SFND_Lidar_Obstacle_Detection/blob/master/CMakeLists.txt)] file provided in this repo can be used locally if you have the same package versions as mentioned above. If you want to run this project locally (outside the Udacity workspace), please follow the steps under the **Local Installation** section.
 
+## Docker Environment
+
+### Build
+
+Please see [here](https://github.com/kaka-lin/autonomous-driving-notes/tree/master/PCL/00_installation).
+
+### Running
+
+```bash
+$ chmod +x run.sh # just need run once
+$ ./run.sh
+```
 
 ## Local Installation
 
