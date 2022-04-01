@@ -1,0 +1,9 @@
+# vscode
+.vscode
+
+# Mac
+.DS_Store
+._.DS_Store
+
+# c++
+build/

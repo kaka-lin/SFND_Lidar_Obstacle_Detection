@@ -32,8 +32,8 @@ Please see [here](https://github.com/kaka-lin/autonomous-driving-notes/tree/mast
 ### Running
 
 ```bash
-$ chmod +x run.sh # just need run once
-$ ./run.sh
+$ chmod +x docker-run.sh # just need run once
+$ ./docker-run.sh
 ```
 
 ## Local Installation
