@@ -1,23 +1,23 @@
 #!/bin/bash
 
-xhost +local:root
+xhost +localhost
 if [ "$1" = "python" ]; then
     docker run --rm -it \
-        --gpus all \
-        -e DISPLAY=$DISPLAY \
+        -e DISPLAY=host.docker.internal:0 \
         -e QT_X11_NO_MITSHM=1 \
-        --volume="$PWD:/root/PCL" \
+        -e QT_QUICK_BACKEND=software \
         --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+        --volume="$PWD:/root/PCL" \
         -w /root/PCL \
         --privileged \
         kakalin/python-pcl:1.8.0
 else
     docker run --rm -it \
-        --gpus all \
-        -e DISPLAY=$DISPLAY \
+        -e DISPLAY=host.docker.internal:0 \
         -e QT_X11_NO_MITSHM=1 \
-        --volume="$PWD:/root/PCL" \
+        -e QT_QUICK_BACKEND=software \
         --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+        --volume="$PWD:/root/PCL" \
         -w /root/PCL \
         --privileged \
         kakalin/pcl:1.8.0
